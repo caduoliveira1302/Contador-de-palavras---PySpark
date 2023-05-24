@@ -3,7 +3,7 @@
 ### O PROJETO
 O projeto do 2º bimestre será composto por dois subprojetos a saber:
 
--1 Processar conteúdo de sites e redes sociais para contar palavras e identificar a ocorrência de termos específicos
+- 1 Processar conteúdo de sites e redes sociais para contar palavras e identificar a ocorrência de termos específicos
 
 2- Apresentar  um  Dashboard  que  demonstre  os  termos  que  mais  ocorrem  e  de forma positiva e relevante.
 
