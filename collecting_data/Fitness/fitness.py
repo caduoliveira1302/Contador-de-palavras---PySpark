@@ -1,6 +1,5 @@
 from playwright.sync_api import Playwright, sync_playwright, expect
 import time
-import csv
 
 
 def run(playwright: Playwright) -> None:
@@ -17,10 +16,9 @@ def run(playwright: Playwright) -> None:
 
     texto = page.locator('//*[@id="page"]/article').text_content()
 
-    with open('Fitness.csv', 'w', newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
-        writer.writerow(['Artigo', 'Texto'])
-        writer.writerow(['Artigo 1', texto])
+    with open('Fitness.txt', 'w', encoding='utf-8') as f:
+        f.write('Artigo 1\n')
+        f.write(texto)
 
 
     page.goto("https://www.fitnessandpower.com/category/bodybuilding-supplements")
@@ -32,9 +30,9 @@ def run(playwright: Playwright) -> None:
     
         texto = page.locator('//*[@id="page"]/article').text_content()
     
-        with open('Fitness.csv', 'a', newline='', encoding='utf-8') as f:
-                writer = csv.writer(f)
-                writer.writerow([f'Artigo {x}', texto])
+        with open('Fitness.txt', 'a', encoding='utf-8') as f:
+            f.write(f'Artigo {x}\n')
+            f.write(texto)
         page.goto("https://www.fitnessandpower.com/category/bodybuilding-supplements")
     
     
